@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pcaceresExamen.Vistas.Registro"
+             Title="Registro">
+    <VerticalStackLayout>
+        
+        <Label x:Name="lblUsuario" FontSize="14" HorizontalTextAlignment="End" TextColor="Blue" ></Label>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Registro" HorizontalTextAlignment="Center" 
+                   TextColor="Blue" FontSize="22"/>
+        </Frame>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Fecha" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Border Stroke="black">
+                <DatePicker x:Name="pkFecha" Format="{}{MM/dd/yyyy}" Grid.Row="0" Grid.Column="1">
+                </DatePicker>
+            </Border>
+
+            <Label Text="Pais" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Border Stroke="black">
+                <Picker x:Name="pkPais" Title="Fecha" Grid.Row="1" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String >Ecuador</x:String>
+                        <x:String >Colombia</x:String>
+                        <x:String >Argentina</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            
+            <Label Text="Ciudad" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Border Stroke="black">
+                <Picker x:Name="pkCiudad" Title="Fecha" Grid.Row="2" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String >Quito</x:String>
+                        <x:String >Bogota</x:String>
+                        <x:String >Buenos Aires</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            <Label Text="Monto Inicial" BackgroundColor="LightCoral" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Entry x:Name="txtMontoInicial"  Keyboard="Numeric" Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+
+            <Label Text="Pago mensual" BackgroundColor="LightSalmon" Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Entry x:Name="txtPagoMensual" IsReadOnly="True" Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+
+
+        </Grid>
+
+        <Button x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked" />
+        <Button x:Name="btnResumen" Text="Resumen" Clicked="btnResumen_Clicked" />
+
+
+    </VerticalStackLayout>
+</ContentPage>

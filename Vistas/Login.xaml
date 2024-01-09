@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pcaceresExamen.Vistas.Login"
+             Title="Login">
+    <StackLayout Spacing="20" Padding="25">
+        <Label 
+            Text="Registro Estudiantes"
+            FontSize="20"
+            TextColor="Red"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png" />
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario:" Grid.Row="0" Grid.Column="0" Margin="10"
+                   BackgroundColor="DarkBlue" TextColor="White"
+                   FontSize="16" 
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtUsuario" Grid.Row="0" Grid.Column="1" Margin="10"
+                   FontSize="16" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"/>
+
+            <Label Text="Contraseña:" Grid.Row="1" Grid.Column="0" Margin="10"
+                   BackgroundColor="DarkBlue" TextColor="White"
+                   FontSize="16" 
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtContrasena" Grid.Row="1" Grid.Column="1" Margin="10" IsPassword="True"
+                   FontSize="16" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center" />
+
+            <Button x:Name="btnIngresar" Grid.Row="2" Grid.Column="0" Text="Iniciar Sesion" Clicked="btnIngresar_Clicked"/>
+            <Button x:Name="btnAcerca" Grid.Row="2" Grid.Column="1" Text="Acerca de:" Clicked="btnAcerca_Clicked"/>
+      </Grid>
+          
+    </StackLayout>
+</ContentPage>
