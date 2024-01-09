@@ -50,7 +50,7 @@ public partial class Login : ContentPage
 
     private void btnAcerca_Clicked(object sender, EventArgs e)
     {
-        DisplayAlert("Realizado por: ", "Pablo Caceres - 8vo A", "OK");
+        DisplayAlert("Realizado por: ", "Pablo Caceres\n8vo Semestre A\nIngenieria en Sistemas de Informacion\nQuito-Ecuador 2024" , "OK");
     }
 }
 

@@ -54,7 +54,7 @@ namespace pcaceresExamen.Vistas;
                          $"Ciudad: {pkCiudad.SelectedItem}\n" +
                          $"País: {pkPais.SelectedItem}\n" +
                          $"Monto Inicial: {txtMontoInicial.Text}\n" +
-                         $"Pago mensual: {txtPagoMensual.Text}\n" +
+                         $"Pago mensual x 4 meses: {txtPagoMensual.Text}\n" +
                          $"Pago Total: {total.ToString()}\n";
 
         DisplayAlert("Resumen: ", mensaje, "OK");
