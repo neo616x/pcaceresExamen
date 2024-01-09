@@ -1,3 +1,5 @@
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace pcaceresExamen.Vistas;
 
     public partial class Registro : ContentPage
@@ -10,7 +12,7 @@ namespace pcaceresExamen.Vistas;
             InitializeComponent();
 
             // Llamar usuario conectado de Login
-            lblUsuario.Text = usuario;
+            lblUsuario.Text = "Usuario conectado:  " + usuario;
         }
 
         private async void btnCalcular_Clicked(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace pcaceresExamen.Vistas;
 
                     //Visualizar el resultado en pantalla
                     txtPagoMensual.Text = cuotas.ToString("c2");
-                }
+                 }
                 else
                 {
                     await DisplayAlert("Datos incorrectos", "El monto inicial debe ser entre 1 y 1500", "OK");
@@ -42,9 +44,24 @@ namespace pcaceresExamen.Vistas;
             }
         }
 
-      
+
     private void btnResumen_Clicked(object sender, EventArgs e)
     {
-        DisplayAlert("Realizado por: ", "Pablo Caceres - 8vo A", "OK");
+        string mensaje = $"Nombre: {txtNombre.Text}\n" +
+                         $"Apellido: {txtApellido.Text}\n" +
+                         $"Edad: {txtEdad.Text}\n" +
+                         $"Fecha: {pkFecha.Date}\n" +
+                         $"Ciudad: {pkCiudad.SelectedItem}\n" +
+                         $"País: {pkPais.SelectedItem}\n" +
+                         $"Monto Inicial: {txtMontoInicial.Text}\n" +
+                         $"Pago mensual: {txtPagoMensual.Text}\n" +
+                         $"Pago Total: {total.ToString()}\n";
+
+        DisplayAlert("Resumen: ", mensaje, "OK");
+    }
+
+    private void btnCerrar_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Login());
     }
 }

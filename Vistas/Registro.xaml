@@ -6,6 +6,7 @@
     <VerticalStackLayout>
         
         <Label x:Name="lblUsuario" FontSize="14" HorizontalTextAlignment="End" TextColor="Blue" ></Label>
+        
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Registro" HorizontalTextAlignment="Center" 
                    TextColor="Blue" FontSize="22"/>
@@ -54,13 +55,73 @@
 
             <Label Text="Pago mensual" BackgroundColor="LightSalmon" Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             <Entry x:Name="txtPagoMensual" IsReadOnly="True" Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
+        </Grid>
 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" Margin="10"
+                   BackgroundColor="DarkBlue" TextColor="White"
+                   FontSize="16" 
+                   FontAttributes="Bold" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="0" Margin="10"
+                   FontSize="16" Keyboard="Text"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"/>
+
+            <Label Text="Apellido:" Grid.Row="0" Grid.Column="1" Margin="10"
+                  BackgroundColor="DarkBlue" TextColor="White"
+                  FontSize="16" 
+                  FontAttributes="Bold"
+                  HorizontalTextAlignment="Center"
+                  VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtApellido" Grid.Row="1" Grid.Column="1" Margin="10"
+                  FontSize="16" Keyboard="Text"
+                  HorizontalTextAlignment="Center" 
+                  VerticalTextAlignment="Center"/>
+
+            <Label Text="Edad:" Grid.Row="0" Grid.Column="2" Margin="10"
+                  BackgroundColor="DarkBlue" TextColor="White"
+                  FontSize="16" 
+                  FontAttributes="Bold"
+                  HorizontalTextAlignment="Center"
+                  VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtEdad" Grid.Row="2" Grid.Column="2" Margin="10"
+                  FontSize="16" Keyboard="Numeric"
+                  HorizontalTextAlignment="Center" 
+                  VerticalTextAlignment="Center"/>
 
         </Grid>
 
-        <Button x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked" />
-        <Button x:Name="btnResumen" Text="Resumen" Clicked="btnResumen_Clicked" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnCalcular" Grid.Row="0" Grid.Column="0" Text="Calcular Pago Mensual" Clicked="btnCalcular_Clicked" />
+            <Button x:Name="btnResumen" Grid.Row="0" Grid.Column="1" Text="Resumen" Clicked="btnResumen_Clicked" />
+        </Grid>
+
+        <Button x:Name="btnCerrar" Text="Cerrar Sesion" Clicked="btnCerrar_Clicked" />
 
     </VerticalStackLayout>
 </ContentPage>
