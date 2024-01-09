@@ -26,32 +26,29 @@
             </Grid.ColumnDefinitions>
 
             <Label Text="Fecha" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Border Stroke="black">
+         
                 <DatePicker x:Name="pkFecha" Format="{}{MM/dd/yyyy}" Grid.Row="0" Grid.Column="1">
                 </DatePicker>
-            </Border>
+   
 
             <Label Text="Pais" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Border Stroke="black">
-                <Picker x:Name="pkPais" Title="Fecha" Grid.Row="1" Grid.Column="1">
+                  <Picker x:Name="pkPais" Title="Pais" Grid.Row="1" Grid.Column="1">
                     <Picker.Items>
                         <x:String >Ecuador</x:String>
                         <x:String >Colombia</x:String>
                         <x:String >Argentina</x:String>
                     </Picker.Items>
                 </Picker>
-            </Border>
-            
+              
             <Label Text="Ciudad" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Border Stroke="black">
-                <Picker x:Name="pkCiudad" Title="Fecha" Grid.Row="2" Grid.Column="1">
+                <Picker x:Name="pkCiudad" Title="Ciudad" Grid.Row="2" Grid.Column="1">
                     <Picker.Items>
                         <x:String >Quito</x:String>
                         <x:String >Bogota</x:String>
                         <x:String >Buenos Aires</x:String>
                     </Picker.Items>
                 </Picker>
-            </Border>
+
             <Label Text="Monto Inicial" BackgroundColor="LightCoral" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             <Entry x:Name="txtMontoInicial"  Keyboard="Numeric" Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  />
 
